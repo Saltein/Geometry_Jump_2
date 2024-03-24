@@ -8,12 +8,6 @@ public class Restart : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // перезапуск сцены, SceneManager.LoadScene(0)
+        Time.timeScale = 1f;
     }
-
-    //  public void ClearScore()
-    //  {
-    //    PlayerPrefs.SetInt("score", 1);
-    //    PlayerPrefs.Save();
-    //  }
-
 }
