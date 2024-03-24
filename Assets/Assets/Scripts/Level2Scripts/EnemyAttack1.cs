@@ -6,7 +6,7 @@ using TMPro;
 public class EnemyAttack1 : MonoBehaviour
 {
     public float speed = 5f; // Скорость движения врага
-
+    private DoodManager doodManager;
     private Transform target; // Цель для движения (дудлер)
 
     Vector3 targetPos;
@@ -31,15 +31,6 @@ public class EnemyAttack1 : MonoBehaviour
 
             // Перемещаем враг по вычисленному вектору перемещения
             transform.Translate(moveAmount);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            
-            Destroy(gameObject);
         }
     }
 }
