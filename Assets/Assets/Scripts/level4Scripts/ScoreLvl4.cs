@@ -8,7 +8,7 @@ public class ScoreLvl4 : MonoBehaviour
     public static float _score = 0;
     public TextMeshProUGUI scoreTXT;
 
-    public float scoreMultipler = 50f;
+    public float scoreMultipler = 150f;
     void Update()
     {
         _score += Time.deltaTime * scoreMultipler;
