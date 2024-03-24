@@ -5,7 +5,7 @@ using UnityEngine;
 public class Doodler : MonoBehaviour
 {
     public float MoveSpeed; // скорость движения/перемещения по X
-    public float FlySpeed; // скорость полета по Y
+    public float JumpForce; // сила прыжка по Y
     public float MoveDecreaser; // замедление движения по X
     private Rigidbody2D rb;
 
@@ -16,10 +16,10 @@ public class Doodler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) // столкновение с твёрдым телом
     {
-        if (rb.velocity.y >= 0.5f) // проверка положительной скорости по Y (вертикальной скорости) объекта, т.е. летит ли объект
+        if (rb.velocity.y <= 0.5f) // проверка отрицательной скорости по Y (вертикальной скорости) объекта, т.е. падает ли объект
         {
             Vector2 Velocity = rb.velocity; // Velocity = вектор текущей скорости объекта
-            Velocity.y = FlySpeed; // составляющая Y Velocity = сила полета
+            Velocity.y = JumpForce; // составляющая Y Velocity = сила прыжка
             rb.velocity = Velocity; // задаём вектор текущей скорости объекта
         }
     }
@@ -48,4 +48,3 @@ public class Doodler : MonoBehaviour
     }
 
 }
-
