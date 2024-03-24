@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1cd113621a4ee9f4fbfb81a661f0ac57
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - planet1: {fileID: 1694639087237064582, guid: 37f00f3c0de376541b0e027a2600dd10, type: 3}
+  - planet2: {instanceID: 0}
+  - planet3: {instanceID: 0}
+  - ScoreTxt: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

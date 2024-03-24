@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 4
-  JumpForce: 16
+  JumpForce: 15
   MoveDecreaser: 0.98
 --- !u!1001 &290005851
 PrefabInstance:
@@ -738,11 +738,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555885197}
   m_CullTransparentMesh: 1
---- !u!4 &600858511 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6684799945850326343, guid: 95ceb133530c9144caea13156250e659, type: 3}
-  m_PrefabInstance: {fileID: 290005851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &865984506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,8 +1157,8 @@ MonoBehaviour:
   YrangeMin: 0.6
   YrangeMax: 1.8
   cameraDistance: 10
-  platformPrefab: {fileID: 1718487868}
-  platformMovePrefab: {fileID: 600858511}
+  platformPrefab: {fileID: 6684799945850326343, guid: c14de3030dfef5d4aa5e0126407d2af9, type: 3}
+  platformMovePrefab: {fileID: 6684799945850326343, guid: 95ceb133530c9144caea13156250e659, type: 3}
   percentSpawn: 0.6
   ScoreTxt: {fileID: 882066902}
 --- !u!4 &1095149589
@@ -1325,11 +1320,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1718487868 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6684799945850326343, guid: c14de3030dfef5d4aa5e0126407d2af9, type: 3}
-  m_PrefabInstance: {fileID: 1870203428797131311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1870203428797131311
 PrefabInstance:
   m_ObjectHideFlags: 0
