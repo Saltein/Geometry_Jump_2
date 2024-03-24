@@ -15,7 +15,7 @@ public class DoodManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = score.ToString(); // Обновляем текст счета
+            scoreText.text = "Score: " + score.ToString(); // Обновляем текст счета
         }
         else
         {
