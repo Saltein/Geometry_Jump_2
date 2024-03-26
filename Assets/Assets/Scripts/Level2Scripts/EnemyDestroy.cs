@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyDestroy : MonoBehaviour
 {
     public int health = 1; // Здоровье врага
-    private DoodManager gameManager; // Ссылка на менеджер игры
+    private DoodManager doodManager; // Ссылка на менеджер игры
 
     void Start()
     {
-        gameManager = GameObject.FindObjectOfType<DoodManager>(); // Находим GameManager в сцене
+        doodManager = GameObject.FindObjectOfType<DoodManager>(); // Находим GameManager в сцене
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -26,8 +26,8 @@ public class EnemyDestroy : MonoBehaviour
 
         if (health <= 0)
         {
+            doodManager.AddScore(100); // Увеличиваем счет игрока через GameManager
             Destroy(gameObject); // Если здоровье врага меньше или равно 0, уничтожаем врага
-            gameManager.AddScore(10); // Увеличиваем счет игрока через GameManager
         }
     }
 }

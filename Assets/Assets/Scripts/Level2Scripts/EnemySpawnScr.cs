@@ -44,7 +44,6 @@ public class EnemySpawnScr : MonoBehaviour
                 spawnRate /= spawnCountIncrease;
                 nextIncreaseTime = Time.time + increaseRate;
 
-                Debug.Log("Increase spawn rate. Current spawn rate: " + spawnRate);
             }
         }
     }

@@ -7,6 +7,11 @@ public class GameOver : MonoBehaviour
     public GameObject collisionPanel; // Панель, которая появляется при столкновении
     public string enemyTag = "Enemy"; // Тэг врага (Enemy)
 
+    private void Start()
+    {
+        collisionPanel.SetActive(false);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(enemyTag))
