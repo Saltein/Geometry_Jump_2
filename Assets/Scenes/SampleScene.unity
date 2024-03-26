@@ -1379,8 +1379,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4259947208285573352, guid: 5f06534399117da49b40948281a0417f, type: 3}
+      propertyPath: probability
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259947208285573352, guid: 5f06534399117da49b40948281a0417f, type: 3}
       propertyPath: minimalSpawnFreq
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

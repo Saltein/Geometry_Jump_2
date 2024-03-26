@@ -16,7 +16,7 @@ public class DoodlerBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isGrounded)
+        if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
             Jump();
         }

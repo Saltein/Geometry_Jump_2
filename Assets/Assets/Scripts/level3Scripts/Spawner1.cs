@@ -13,6 +13,7 @@ public class Spawner1 : MonoBehaviour
   public float percentSpawn2;// вероятность создания прф.platform
   private Transform cam; // ссылка на камеру
   private float lastSpawnY; // последнее место создания платформы по Y
+    private float lastlastSpawn;
   private float rangeIncreaser; // увеличение расстояния м-у платформами по Y
   public TextMeshProUGUI ScoreTxt; // ссылка на кмп.TextMeshPro-Text(UI) об.Canvas.Text(TMP)
   private int score; // очки персонажа
@@ -25,7 +26,7 @@ public class Spawner1 : MonoBehaviour
 
   void Update()
   {
-    ScoreTxt.text = "Очки: " + score;
+    ScoreTxt.text = "Очки: " + ScoreScriptMain._score;
 
     if (lastSpawnY < 250) // условие для увеличения расстояния м-у платформами по Y
     {
@@ -47,19 +48,15 @@ public class Spawner1 : MonoBehaviour
     Random.Range(minX, maxX), // координата X
     lastSpawnY + Random.Range(YrangeMin+(rangeIncreaser*0.9f), YrangeMax+(rangeIncreaser*1.1f)), // координата Y
     0); // координата Z
-//    Transform platform = Instantiate (platformPrefab, new Vector3 (Random.Range(minX, maxX), lastSpawnY + Random.Range(YrangeMin, YrangeMax), 0), Quaternion.identity);
+        //    Transform platform = Instantiate (platformPrefab, new Vector3 (Random.Range(minX, maxX), lastSpawnY + Random.Range(YrangeMin, YrangeMax), 0), Quaternion.identity);
 
+      lastlastSpawn = lastSpawnY;
       lastSpawnY = planets.position.y;
 
       if (lastSpawnY-12 > 0) // чтобы очков было меньше, примерно 0 за нулевое положение дудлера
           score = Mathf.CeilToInt((lastSpawnY-12)*100); // Mathf.CeilToInt() - округление float в int
-
-//      if (score > PlayerPrefs.GetInt("score", 1))
-//      {
-//        PlayerPrefs.SetInt("score", score);
-//        PlayerPrefs.Save();
-//      }
-    }
+          ScoreScriptMain._score += Mathf.CeilToInt(lastSpawnY - lastlastSpawn) * 150f;
+        }
   }
 
 }
