@@ -9,5 +9,6 @@ public class Restart : MonoBehaviour
     {
         SceneManager.LoadScene(1); // перезапуск сцены, SceneManager.LoadScene(0)
         Time.timeScale = 1f;
+        ScoreScriptMain._score = 0;
     }
 }

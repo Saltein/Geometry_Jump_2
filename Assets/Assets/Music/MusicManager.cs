@@ -35,7 +35,7 @@ public class MusicManager : MonoBehaviour
         if (sceneIndex >= 0 && sceneIndex < levelMusic.Length) // Проверяем наличие музыки для данной сцены
         {
             audioSource.clip = levelMusic[sceneIndex];
-            audioSource.volume = 0.1f;
+            audioSource.volume = 1f;
             audioSource.Play();
         }
     }

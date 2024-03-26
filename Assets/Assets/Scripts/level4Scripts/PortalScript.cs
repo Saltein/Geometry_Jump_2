@@ -18,11 +18,15 @@ public class PortalScript : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        
         if (SceneManager.GetActiveScene().name == "level5")
-        {
+        { 
             Rigidbody2D rb2d = gameObject.AddComponent<Rigidbody2D>();
             rb2d.mass = 1.0f;
+        }
+        if (SceneManager.GetActiveScene().name == "level2")
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 
@@ -61,6 +65,10 @@ public class PortalScript : MonoBehaviour
         {
             Lvl2Movament();
         }
+        if (SceneManager.GetActiveScene().name == "level5")
+        {
+            Lvl5Movament();
+        }
     }
 
     private void Lvl4Movament()
@@ -82,5 +90,9 @@ public class PortalScript : MonoBehaviour
         {
             Debug.Log("Цель не найдена");
         }
+    }
+    private void Lvl5Movament()
+    {
+        transform.Translate(Vector3.down * portalSpeed);
     }
 }
