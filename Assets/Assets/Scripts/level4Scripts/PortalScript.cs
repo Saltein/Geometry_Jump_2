@@ -93,6 +93,6 @@ public class PortalScript : MonoBehaviour
     }
     private void Lvl5Movament()
     {
-        transform.Translate(Vector3.down * portalSpeed);
+        transform.Translate(Vector3.down * 0.01f);
     }
 }

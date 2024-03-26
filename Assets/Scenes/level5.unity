@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: 0
   maxX: 0
-  spawnInterval: 5
+  spawnInterval: 2
   fallSpeed: 0.08
   ingredientPrefab: {fileID: 4771485020436364950, guid: 49ba0695fa420b349a9bd4adfda3f98d, type: 3}
 --- !u!1 &2141930132

@@ -9,6 +9,11 @@ public class Basket : MonoBehaviour
 {
     private int score = 0; // Очки игрока
     public TextMeshProUGUI scoreText;
+
+    private void Start()
+    {
+        scoreText.text = "Score:" + ScoreScriptMain._score.ToString();
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Проверяем, что столкнувшийся объект - ингредиент
