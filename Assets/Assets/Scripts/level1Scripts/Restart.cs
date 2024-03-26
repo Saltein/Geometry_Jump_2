@@ -7,7 +7,7 @@ public class Restart : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // перезапуск сцены, SceneManager.LoadScene(0)
+        SceneManager.LoadScene(1); // перезапуск сцены, SceneManager.LoadScene(0)
         Time.timeScale = 1f;
     }
 }
